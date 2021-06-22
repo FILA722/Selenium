@@ -1,14 +1,11 @@
-import pytest
 from selenium import webdriver
-
+import pytest
 
 def pytest_addoption(parser):
-    parser.addoption('--language', action='store', default='en')
+    parser.addoption('--language', action='store', default='ru')
 
 @pytest.fixture(scope='function')
 def browser(request):
-    language = request.config.getoption('language')
+    # language = request.config.getoption('language')
     browser = webdriver.Firefox()
-    # link = f'http://selenium1py.pythonanywhere.com/{language}/catalogue/coders-at-work_207/'
-    # browser.get(link)
     return browser
