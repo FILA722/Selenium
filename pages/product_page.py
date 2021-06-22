@@ -4,6 +4,7 @@ from .base_page import BasePage
 from .main_page import MainPage
 from .locators import LoginPageLocators
 from .locators import BasketPageLocators
+import pytest
 import time
 
 class ProductPage(BasePage):
